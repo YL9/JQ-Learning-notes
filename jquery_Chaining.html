@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+        // 通过 jquery 可以把动作/方法链接起来
+        // Chaining 允许我们在一条语句中运行多个 jquery 方法
+        $().ready(function(){
+            $("button").click(function(){
+                $("#p1").css("color","red").slideUp(2000).slideDown(2000)
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="p1">hhhhhh</p>
+    <button>Start</button>
+</body>
+</html>

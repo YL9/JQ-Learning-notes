@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css"> 
+        #panel,#flip{
+            padding:5px;
+            text-align:center;
+            background-color:#e5eecc;
+            border:solid 1px #c3c3c3;
+        }
+        #panel{
+            padding:50px;
+            display:none;
+        }
+    </style>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+        $().ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideDown(3000)
+            })
+            $("#stop").click(function(){
+                $("#panel").stop()
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="stop">停止滑动</button>
+    <div id="flip">点击这里，向下滑动面板</div>
+    <div id="panel">Hello world!</div>
+</body>
+</html>

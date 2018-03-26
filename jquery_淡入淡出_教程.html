@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+
+        // 在 fadeIn(),fadeOut(),fadeToggle() 中，括号里面都可以跟参数，比如：
+        // fadeIn("slow")  或者  fadeIn(1000)     -->  slow 和 1000 都属于参数，代表动画进行的时间    1000 为毫秒
+        
+        // 创建初始事件(ready) -> 然后指定对象创建点击事件(click) -> 然后给需要添加行为的元素添加相对应事件(fadeToggle)
+
+
+        // 点击按钮，图片淡入
+       $(document).ready(function(){         // 默认事件
+           $(".btn1").click(function(){      // click()  -->  点击事件     --> 给类为 btn1 的元素添加一个点击事件
+               $(".imgs_1").fadeIn()         // fadeIn() -->  淡入        --> 给类为 imgs_1 的元素添加一个淡入的动画
+           })
+       }) 
+
+        // 点击按钮，图片淡出
+        $(document).ready(function(){         // 默认事件
+            $(".btn2").click(function(){      // click()  -->  点击事件     --> 给类为 btn1 的元素添加一个点击事件
+                $(".imgs_2").fadeOut()        // fadeOut() -->  淡出        --> 给类为 imgs_2 的元素添加一个淡出的动画
+            })
+        })
+
+        // 点击按钮，图片淡入淡出
+        $(document).ready(function(){         // 默认事件
+            $(".btn3").click(function(){      // click()  -->  点击事件     --> 给类为 btn1 的元素添加一个点击事件
+                $(".imgs_3").fadeToggle()     // fadeToggle() -->  淡入淡出     --> 可以多次点击        --> 给类为 imgs_3 的元素添加一个淡入淡出的动画
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- 图片淡入 -->
+    <button class="btn1">淡入</button>
+    <br>
+    <img class="imgs_1" src="../image/二哈.jpg" alt="" style="display:none;">    <!-- 仅在 fadeIn() 中，要给CSS添加属性：display:none; -->
+    <br>
+
+    <!-- 图片淡出 -->
+    <button class="btn2">淡出</button>
+    <br>
+    <img class="imgs_2" src="../image/二哈.jpg" alt="">
+    <br>
+
+    <!-- 图片淡入淡出 -->
+    <button class="btn3">淡入/淡出</button>
+    <br>
+    <img class="imgs_3" src="../image/二哈.jpg" alt="">
+    <br>
+</body>
+</html>

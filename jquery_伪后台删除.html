@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+        $().ready(function(){
+            $("#del").click(function(){
+                $(".tipsbox").show("slow")
+            })
+            $("input[name=confirm]").click(function(){
+                $("img").remove()
+                $("td.money").html('￥ 0 元')
+                $()
+            })
+            $("input[name=cancel]").click(function(){
+                $(".tipsbox").hide("fast")
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="cart">
+        <table width="600" border="1" cellpadding="0" cellspacing="0">
+            <tr>
+                <th><input type="checkbox">全选</th>
+                <th>商品信息</th>
+                <th>价格</th>
+                <th>数量</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td><img src="../image/banner_1.png" alt="">衣服</td>
+                <td class="money">￥ 259元</td>
+                <td><input type="text" value="1"></td>
+                <td id="del" style="cursor: pointer;">删除</td>
+            </tr>
+        </table>
+        <div class="tipsbox" style="display:none;">
+            <p>确定要删除吗？</p>
+            <p>
+                <input type="button" value="确定" name="confirm" class="btns">
+                <input type="button" value="取消" name="cancel" class="btns">
+            </p>
+        </div>
+    </div>
+</body>
+</html>

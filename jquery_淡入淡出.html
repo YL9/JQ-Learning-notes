@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+        // 淡入  fadeIn
+        $().ready(function(){
+            $("#danru").click(function(){
+                $("#div1").fadeIn()
+                $("#div2").fadeIn("slow")
+                $("#div3").fadeIn(1000)
+            })
+        })
+        // 淡出  fadeOut
+        $().ready(function(){
+            $("#danchu").click(function(){
+                $("#div4").fadeOut()
+                $("#div5").fadeOut("slow")
+                $("#div6").fadeOut(1000)
+            })
+        })
+        // 淡入淡出  fadeToggle
+        $().ready(function(){
+            $("#danruchu").click(function(){
+                $("#div7").fadeToggle()
+                $("#div8").fadeToggle("slow")
+                $("#div9").fadeToggle(1000)
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="danru">淡入</button>
+    <div id="div1" style="width:80px;height:80px;background:yellow;display:none;"></div>
+    <div id="div2" style="width:80px;height:80px;background:blue;display:none;"></div>
+    <div id="div3" style="width:80px;height:80px;background:red;display:none;"></div>
+
+    <button id="danchu">淡出</button>
+    <div id="div4" style="width:80px;height:80px;background:rgb(255, 136, 0);"></div>
+    <div id="div5" style="width:80px;height:80px;background:rgb(0, 255, 21);"></div>
+    <div id="div6" style="width:80px;height:80px;background:rgb(129, 10, 139);"></div>
+
+    <button id="danruchu">淡入淡出</button>
+    <div id="div7" style="width:80px;height:80px;background:rgb(0, 255, 221);"></div>
+    <div id="div8" style="width:80px;height:80px;background:rgb(145, 255, 0);"></div>
+    <div id="div9" style="width:80px;height:80px;background:rgb(255, 0, 106);"></div>
+</body>
+</html>

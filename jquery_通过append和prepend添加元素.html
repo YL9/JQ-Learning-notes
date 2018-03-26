@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script>
+        function appendText (){
+            var txt1 = "<p>Text.</p>"  // 以 HTML 创建新元素
+            var txt2 = $("<p></p>").text("asd.")   // 以 Jquery 创建新元素
+            var txt3 = document.createElement("p")
+            txt3.innerHTML = "asd."     // 通过 DOM 来创建新文本
+            $("body").append(txt1,txt2,txt3)  // 追加新元素
+        }
+    </script>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+    <button onclick="appendText()">追加文本</button>
+</body>
+</html>
